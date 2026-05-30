@@ -43,8 +43,5 @@ Node * deleteHead(Node *head) {
 int main(){
   vector<int> arr = {2, 5, 8, 7};
   Node* head = convertArr2LL(arr);
-  cout << "Enter Element to Search In LL, Output 1 = Exists; Output 0 = Does not Exist.";
-  int k;
-  cin >> k;
   deleteHead(head);
 }
