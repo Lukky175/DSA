@@ -32,7 +32,7 @@ Node* convertArr2LL(vector<int> &arr){
   return head;
 }
 
-int NodesOfCpp(Node *head){
+int NodesOfLL(Node *head){
 	int cnt = 0;
   Node* temp = head;
   while(temp){
@@ -45,6 +45,6 @@ int NodesOfCpp(Node *head){
 int main(){
   vector<int> arr = {2, 5, 8, 7};
   Node* head = convertArr2LL(arr);
-  int count = NodesOfCpp(head);
+  int count = NodesOfLL(head);
   cout << count;
 }
