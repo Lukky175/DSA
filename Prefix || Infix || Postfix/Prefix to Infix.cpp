@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+string prefixToInfix(string exp){
+	stack<string> st;
+	for(int i = exp.size()-1;i>=0;i--){
+	    if((exp[i]>= 'A' && exp[i]<='Z') || (exp[i]>='a' && exp[i]<='z') || (exp[i]>='0' && exp[i]<='9')) st.push(string(1, exp[i]));
+	    else{
+	        string t1 = st.top();
+	        st.pop();
+	        string t2 = st.top();
+	        st.pop();
+	        string t3 = "(" + t1 + string(1, exp[i]) + t2 + ")";
+	        st.push(t3);
+	    }
+	}
+	return st.top();
+}
+
+int main() {
+    string i = "+a*b-^cde";
+    string newi = prefixToInfix(i);
+    cout << newi;
+
+    return 0;
+}
