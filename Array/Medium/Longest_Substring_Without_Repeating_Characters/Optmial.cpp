@@ -4,7 +4,7 @@ int lengthOfLongestSubstring(string s) {
     int lmax = 0;
     unordered_map<int,int> mpp;
     while(r<s.size()){
-        if(mpp.find(s[r]) != mpp.end() && mpp[s[r]] > l){
+        if(mpp.find(s[r]) != mpp.end() && mpp[s[r]] >= l){
             l = mpp[s[r]] + 1;
         }
         int len = r - l + 1;
